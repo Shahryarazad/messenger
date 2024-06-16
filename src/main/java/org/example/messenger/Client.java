@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import server.MessagesQueue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +16,6 @@ public class Client extends Application {
 
     public static BufferedReader socketIn;
     public static PrintWriter socketOut;
-
     public static Stage mainStage;
 
     @Override
@@ -36,7 +36,7 @@ public class Client extends Application {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         launch();
     }
 }
+
