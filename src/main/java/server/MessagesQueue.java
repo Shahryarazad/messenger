@@ -26,7 +26,7 @@ public class MessagesQueue {
         if(username.equals("Bob")) {
             return queue1.isEmpty();
         }
-    else
+        else
             return queue.isEmpty();
 
 

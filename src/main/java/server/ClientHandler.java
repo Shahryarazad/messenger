@@ -61,9 +61,12 @@ public class ClientHandler implements Runnable{
                         String user = in.readLine();
                         for (int i = 0; i < Server.users.size(); i++) {
                             if(Server.users.get(i).getUsername().equals(user)) {
+                                String s = "";
                                 while (!Server.users.get(i).messages.isEmpty()) {
-                                    System.out.println(Server.users.get(i).messages.getMessage());
+//                                    System.out.println(Server.users.get(i).messages.getMessage());
+                                    s += String.valueOf(Server.users.get(i).messages.getMessage());
                                 }
+                                out.println(s);
                             }
                         }
                         break;
